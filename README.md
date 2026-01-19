@@ -93,35 +93,58 @@ OpenRouter (Free LLM)
 ## 📡 API Endpoints
 
 ### Health Check
+Endpoint:
 GET /
 
+Description:
+Checks whether the backend service is running.
+
+Response:
+{
+  "status": "ok",
+  "message": "Backend is running"
+}
+
+---
+
 ### Ask Question (Text Input)
+Endpoint:
 POST /ask
 
-### Request Body:
-    ```json
-    {
-      "document_text": "string",
-      "question": "string"
-    }
-    
-    Upload PDF & Ask Question
+Description:
+Allows asking a question on plain text content without uploading a file.
 
-    
-    POST /upload-and-ask
-    
-    Form Data:
-    
-    file: PDF document
-    
-    question: Question related to the document
-    
-    Response:
-    
-    {
-      "answer": "string",
-      "confidence": 0.0
-    }
+Request Body:
+{
+  "document_text": "string",
+  "question": "string"
+}
+
+Response:
+{
+  "answer": "string",
+  "confidence": 0.0
+}
+
+---
+
+### Upload PDF & Ask Question
+Endpoint:
+POST /upload-and-ask
+
+Description:
+Uploads a PDF document and allows asking a question based on its content.
+
+Form Data:
+- file: PDF document
+- question: string
+
+Response:
+{
+  "answer": "string",
+  "confidence": 0.0
+}
+
 
 ## 🔐 Environment Variables
 
@@ -139,9 +162,7 @@ cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
 
-
 Swagger UI:
-
 http://127.0.0.1:8000/docs
 
 Frontend
@@ -149,50 +170,17 @@ cd frontend
 npm install
 npm run dev
 
-
 Open in browser:
-
 http://localhost:3000
 
 📦 Deployment
-
 Backend: Render
-
 Frontend: Vercel
 
 The application is deployed as two independent services and communicates via REST APIs.
 
-🎯 Evaluation Alignment
 
-This project demonstrates:
 
-Full-stack application quality
-
-Clear product flow and real user journey
-
-Thoughtful feature design
-
-Polished UI/UX with good typography and spacing
-
-Robust backend implementation
-
-Clean APIs and reliable agent orchestration
-
-Proper validation, error handling, and deployment practices
-📄 License
-
-MIT
-
----
-
-## ✅ What to do now (ONLY THIS)
-
-1. Replace your `README.md` with the above
-2. Run:
-```bash
-git add README.md
-git commit -m "Finalize README with deployment and architecture details"
-git push
 
 
 
