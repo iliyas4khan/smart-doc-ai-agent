@@ -26,7 +26,7 @@ export default function Home() {
     formData.append("question", question);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/upload-and-ask", {
+      const res = await fetch("https://smart-doc-ai-agent.onrender.com/upload-and-ask", {
         method: "POST",
         body: formData,
       });
