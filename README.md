@@ -157,6 +157,7 @@ OPENROUTER_API_KEY=your_openrouter_api_key
 A .env.example file is provided.
 
 ▶️ Running Locally
+
 Backend
 cd backend
 pip install -r requirements.txt
@@ -174,6 +175,7 @@ Open in browser:
 http://localhost:3000
 
 📦 Deployment
+
 Backend: Render
 
 Frontend: Vercel
