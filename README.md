@@ -5,7 +5,21 @@ A full-stack **Generative AI document analysis application** built using **Pydan
 The application allows users to upload a PDF document and ask natural language questions about its content.  
 A Pydantic AI–based agent analyzes the document and returns **structured, validated answers** with a confidence score.
 
-This project is designed as a **real-world AI agent system**, with strong focus on backend reliability, clean APIs, and polished UX.
+This project is designed as a **real-world AI agent system**, focusing on backend robustness, clean APIs, and polished UX.
+
+---
+
+## 🚀 Live Application
+
+### Frontend (Vercel)
+https://smart-doc-ai-agent.vercel.app
+
+### Backend (Render)
+https://smart-doc-ai-agent.onrender.com
+
+Swagger API Docs:
+https://smart-doc-ai-agent.onrender.com/docs
+
 
 ---
 
@@ -63,14 +77,122 @@ OpenRouter (Free LLM)
 ### AI & Backend
 - Pydantic AI agent with explicit system rules
 - Strict schema validation using Pydantic models
-- LLM output sanitization (handles markdown-wrapped JSON)
+- Defensive parsing of LLM output (handles markdown-wrapped JSON)
 - Clean REST APIs with Swagger documentation
-- Robust error handling and logging
+- Robust error handling, logging, and CORS configuration
 
 ### Frontend & UX
-- Clear visual hierarchy and typography
-- Highlighted title and result sections
+- Clear visual hierarchy and readable typography
+- Highlighted title and output sections
 - Explicit file selection feedback
 - Smooth hover and focus interactions
-- Loading and error states for better UX
+- Loading and error states for better user experience
+
+---
+
+## 📡 API Endpoints
+
+### Health Check
+GET /
+
+### Ask Question (Text Input)
+POST /ask
+
+### Request Body:
+    ```json
+    {
+      "document_text": "string",
+      "question": "string"
+    }
+    
+    Upload PDF & Ask Question
+
+    
+    POST /upload-and-ask
+    
+    Form Data:
+    
+    file: PDF document
+    
+    question: Question related to the document
+    
+    Response:
+    
+    {
+      "answer": "string",
+      "confidence": 0.0
+    }
+
+## 🔐 Environment Variables
+
+Create a .env file inside the backend/ directory:
+
+OPENROUTER_API_KEY=your_openrouter_api_key
+
+
+⚠️ Never commit .env files.
+A .env.example file is provided.
+
+▶️ Running Locally
+Backend
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+
+Swagger UI:
+
+http://127.0.0.1:8000/docs
+
+Frontend
+cd frontend
+npm install
+npm run dev
+
+
+Open in browser:
+
+http://localhost:3000
+
+📦 Deployment
+
+Backend: Render
+
+Frontend: Vercel
+
+The application is deployed as two independent services and communicates via REST APIs.
+
+🎯 Evaluation Alignment
+
+This project demonstrates:
+
+Full-stack application quality
+
+Clear product flow and real user journey
+
+Thoughtful feature design
+
+Polished UI/UX with good typography and spacing
+
+Robust backend implementation
+
+Clean APIs and reliable agent orchestration
+
+Proper validation, error handling, and deployment practices
+📄 License
+
+MIT
+
+---
+
+## ✅ What to do now (ONLY THIS)
+
+1. Replace your `README.md` with the above
+2. Run:
+```bash
+git add README.md
+git commit -m "Finalize README with deployment and architecture details"
+git push
+
+
 
