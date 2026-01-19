@@ -175,6 +175,7 @@ http://localhost:3000
 
 📦 Deployment
 Backend: Render
+
 Frontend: Vercel
 
 The application is deployed as two independent services and communicates via REST APIs.
