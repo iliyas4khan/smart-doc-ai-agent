@@ -26,7 +26,9 @@ https://smart-doc-ai-agent.onrender.com/docs
 ## 🎥 Project Walkthrough (Assessment Submission)
 
 🔗 **Watch the LinkedIn Walkthrough Video**  
-[Click here to watch]([https://www.linkedin.com/posts/<your-linkedin-post-id>](https://www.linkedin.com/posts/iliyas4khan_potpieai-softwareengineer-generativeai-ugcPost-7419324049664782336-j1yK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIC0tcBL4EV25pr36eHkLHyvvd1ysIeX6M))
+
+[Click here to watch](https://www.linkedin.com/posts/iliyas4khan_potpieai-softwareengineer-generativeai-ugcPost-7419324049664782336-j1yK)
+
 
 
 ## 🚀 Features
